@@ -14,7 +14,7 @@ def hash(s):
     return has_value % m
 with open('students.csv')as f, open('students_new_hash.csv','w') as nf:
     data = list(csv.reader(f,delimiter=';'))
-    res = csv.writer(nf, delimiter=';')
+    res = csv.writer(nf, delimiter=',')
     print(data[1])
     res.writerow(data[0])
     for s in data[1:]:
